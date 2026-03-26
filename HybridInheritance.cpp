@@ -20,7 +20,7 @@ class GradStudent: public Student{
 public:
 string ResearchArea;
 };
-class TA: virtual public Teacher, virtual public Student{
+class TA: public Teacher, public Student{
 public:
 double Salary;
 };
@@ -38,5 +38,6 @@ int main(){
     t1.Salary = 3343322;
     t1.RollNo = 1223333;
     t1.Course = "BlockChain";
+    cout<<"Name:"<<t1.name<<"\n";
     return 0;
 }
